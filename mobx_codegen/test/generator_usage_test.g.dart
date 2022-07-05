@@ -220,9 +220,9 @@ mixin _$TestStore on _TestStore, Store {
 
   @override
   Future<void> newAsyncActionOptionalParam(String param1,
-      [dynamic $newBehavior = true]) {
-    return _$newAsyncActionOptionalParamAsyncAction
-        .run(() => super.newAsyncActionOptionalParam(param1, $newBehavior));
+      [dynamic $AsyncActionNewBehavior = true]) {
+    return _$newAsyncActionOptionalParamAsyncAction.run(() =>
+        super.newAsyncActionOptionalParam(param1, $AsyncActionNewBehavior));
   }
 
   late final _$newAsyncActionNamedParamAsyncAction = AsyncAction(
@@ -232,9 +232,10 @@ mixin _$TestStore on _TestStore, Store {
 
   @override
   Future<void> newAsyncActionNamedParam(String param1,
-      {dynamic $newBehavior = true}) {
-    return _$newAsyncActionNamedParamAsyncAction.run(() =>
-        super.newAsyncActionNamedParam(param1, $newBehavior: $newBehavior));
+      {dynamic $AsyncActionNewBehavior = true}) {
+    return _$newAsyncActionNamedParamAsyncAction.run(() => super
+        .newAsyncActionNamedParam(param1,
+            $AsyncActionNewBehavior: $AsyncActionNewBehavior));
   }
 
   late final _$_TestStoreActionController =

@@ -129,7 +129,7 @@ abstract class _TestStore with Store {
 
   @action
   Future<void> newAsyncActionOptionalParam(String param1,
-      [$newBehavior = true]) async {
+      [$AsyncActionNewBehavior = true]) async {
     batchItem1 = 'item1';
     await Future.delayed(const Duration(milliseconds: 10));
     batchItem2 = 'item2';
@@ -140,7 +140,7 @@ abstract class _TestStore with Store {
 
   @action
   Future<void> newAsyncActionNamedParam(String param1,
-      {$newBehavior = true}) async {
+      {$AsyncActionNewBehavior = true}) async {
     batchItem1 = 'item1';
     await Future.delayed(const Duration(milliseconds: 10));
     batchItem2 = 'item2';

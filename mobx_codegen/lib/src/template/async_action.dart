@@ -29,7 +29,7 @@ class AsyncActionTemplate {
 
     for (final list in method.params.templates) {
       for (final ParamTemplate param in list.templates) {
-        if (param.name == '\$newBehavior') {
+        if (param.name == '\$AsyncActionNewBehavior') {
           isNewBehavior = param.defaultValue == 'true';
 
           break;
